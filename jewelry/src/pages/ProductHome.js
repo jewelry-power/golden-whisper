@@ -11,10 +11,10 @@ function ProductHome() {
     <div class="relative overflow-hidden bg-white">
     <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
       <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-        <div class="sm:max-w-lg">
-          <h1 class="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Golden Whisper</h1>
+        <div class="sm:max-w-lg glow">
+          <h1 class="font text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl ">Golden Whisper</h1>
           <p class="mt-4 text-xl text-gray-500">Welcom to our shop,Golden Whisper is an online jewelry boutique that has the elegant jewels from  different brands all you have to do is pick what you want then we will deliver it you where ever you are   </p>
-          <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white mt-5 hover:bg-indigo-700 prodBtn">Shop Collection</a>
+          <a href="#" class="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white mt-5 hover:bg-indigo-700 prodBtn">See our collection</a>
         </div>
         <div>
           <div class="mt-10">
