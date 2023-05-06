@@ -10,6 +10,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+
+}
+.aa{
+  height: 40rem;
+  border-radius: 0;
+  margin-bottom:4rem
 }
 
 @tailwind base;
