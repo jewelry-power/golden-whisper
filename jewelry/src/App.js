@@ -4,8 +4,8 @@ import Nav from "./pages/Nav"
 import Hero from "./Hero"
 import Footer from "./pages/Footer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Product from "./pages/Products";
-import ProductPage from "./other/Product";
+
+import ProductPage from "./pages/Allproduct";
 // import Cart from "./other/Cart";
 import Home from "./pages/Home"
 import Discount from "./pages/Discount"
@@ -23,7 +23,7 @@ function App() {
         <Route path="/pro" element={<ProductPage/>}/>
         <Route path="/dis" element={<Discount/>}/>
           
-      <Route path="/product" element={<Product/>}>       </Route> 
+     
          {/* <Route path="/cart" element={<Cart/>}/>  */}
         
    
