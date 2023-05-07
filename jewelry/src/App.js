@@ -11,7 +11,7 @@ import Home from "./pages/Home"
 import Discount from "./pages/Discount"
 import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
-
+import AboutUs from "./pages/AboutUs"
 function App() {
   return (
     <div className="App">
@@ -23,6 +23,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/pro" element={<ProductPage/>}/>
         <Route path="/dis" element={<Discount/>}/>
+        <Route path="/about" element={<AboutUs/>}/>
           
      
          <Route path="/Signup" element={<SignUp/>}/> 
@@ -33,7 +34,7 @@ function App() {
          
       </Routes>
    
-      <Footer/>
+      {/* <Footer/> */}
     </BrowserRouter>
 
 

@@ -4,28 +4,30 @@ function SignIn() {
     // console.log(localStorage.infoUser)
 const[emailInput,setEmailInput]=useState()
 const[passwordInput,setpasswordInput]=useState()
-const [check,setCheck]=useState()
+const [check,setCheck]=useState([])
 function handelSignIn(e){
 e.preventDefault();
-const data=JSON.parse(localStorage.getItem("infoUser"));
-// let info=Object.values(data)
-data.forEach((element,index) => {
-    let email=element.email
-    let password=element.password
-   if(emailInput==email){
-      let user={email,password}
-    }
+setCheck(JSON.parse(localStorage.getItem("infoUser")));
+// let info=Object.keys(data)
+console.log(check)
+
+// check.forEach((element,index) => {
+//     let email=element.email
+//     let password=element.password
+//    if(emailInput==email){
+//       let user={email,password}
+//     }
     
-});
-if(!localStorage.infoUser.includes(emailInput)){
+// });
+if(!check.includes(emailInput)){
     alert(`seems like you dont have account ,sign up now`)
 }
-if(localStorage.infoUser.includes(emailInput)&&localStorage.infoUser.includes(passwordInput)){
- alert("now you have an account")  
+if(check.includes(emailInput)&&localStorage.infoUser.includes(passwordInput)){
+ alert("welcome")  
 }
-if(localStorage.infoUser.includes(emailInput)){
-alert("wrong password")
-}
+// if(localStorage.infoUser.includes(emailInput)){
+// alert("wrong password")
+// }
 }
   return (
     <div>
@@ -80,8 +82,11 @@ alert("wrong password")
     </div>
   
   </section>
+ 
     </div>
   )
 }
 
 export default SignIn
+
+

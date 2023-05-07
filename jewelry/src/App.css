@@ -157,3 +157,18 @@ from {
         0 0 60px rgba(255, 192, 0, .7);
     }
 }
+.background{
+  background-image: url(/src/assets/contactA.png);
+  background-size: cover;
+      }
+  .background-3{
+  background-image: url(./images/FFF.png);
+  background-size: cover;
+  background-position: top;
+  }
+  
+  
+  .background-2{
+    background-image: url(/src/assets/Contact.png);
+    background-size: cover;
+    }

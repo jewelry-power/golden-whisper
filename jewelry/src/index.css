@@ -17,7 +17,13 @@ code {
   border-radius: 0;
   margin-bottom:4rem
 }
-
+.pvalidate{
+  display: none
+}
+.pWrong{
+  display:block;
+  color:red
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
