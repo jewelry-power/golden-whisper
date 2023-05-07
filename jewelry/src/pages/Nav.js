@@ -42,7 +42,7 @@ function Example() {
         className="p-1 neonHover"
       >
         <p href="#" className="flex m-2 pt-12 items-center">
-          Account
+          About Us
         </p>
       </Typography>
       <Typography
@@ -52,7 +52,7 @@ function Example() {
         className="p-1 neonHover"
       >
         <p href="#" className="flex  m-2  pt-12 items-center">
-          Blocks
+         Products
         </p>
       </Typography>
       <Typography
@@ -61,8 +61,8 @@ function Example() {
         color="blue-gray"
         className="p-1 neonHover"
       >
-        <p href="#" className="flex m-2 pt-12 items-center">
-          Docs
+        <p href="#" className="flex m-2 pt-12 items-center  ">
+          Cart
         </p>
       </Typography>
     </ul>
@@ -70,7 +70,7 @@ function Example() {
  
   return (
     <>
-      <Navbar className="inset-0 z-10 h-max max-w-full rounded-none  px-4 lg:px-8 lg:py-4 backgNav">
+      <Navbar className="inset-0 z-10 h-max max-w-full rounded-none sticky px-4 lg:px-8 lg:py-4 backgNav">
         <div className="flex items-center  text-blue-gray-900 flexNavigation">
           <Typography
             as="a"
@@ -90,7 +90,7 @@ function Example() {
             //   size="sm"
               className="hidden lg:inline-block mt-12 "
             >
-              <span>Buy Now</span>
+              <span>Sign In</span>
             </Button>
             <IconButton
               variant="text"

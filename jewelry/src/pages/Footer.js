@@ -13,45 +13,7 @@ function Footer() {
     <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
    Welcome to our Golden Whisper shop,here you can find what you need with the newest collection from different brands in the jewelry world  </p>
 
-    <nav aria-label="Footer Nav" class="mt-12">
-      <ul class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-            About
-          </a>
-        </li>
-
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-            Careers
-          </a>
-        </li>
-
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-            History
-          </a>
-        </li>
-
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-            Services
-          </a>
-        </li>
-
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-            Projects
-          </a>
-        </li>
-
-        <li>
-          <a class="text-gray-700 transition hover:text-gray-700/75" href="/">
-            Blog
-          </a>
-        </li>
-      </ul>
-    </nav>
+   
 
     <ul class="mt-12 flex justify-center gap-6 md:gap-8">
       <li>
@@ -79,7 +41,7 @@ function Footer() {
 
       <li>
         <a
-          href="/"
+          href="https://github.com/jewelry-power/golden-whisper"
           rel="noreferrer"
           target="_blank"
           class="text-gray-700 transition hover:text-gray-700/75"
@@ -114,7 +76,7 @@ function Footer() {
 
       <li>
         <a
-          href="/"
+          href="https://github.com/jewelry-power/golden-whisper"
           rel="noreferrer"
           target="_blank"
           class="text-gray-700 transition hover:text-gray-700/75"
@@ -137,7 +99,7 @@ function Footer() {
 
       <li>
         <a
-          href="/"
+          href="https://github.com/jewelry-power/golden-whisper"
           rel="noreferrer"
           target="_blank"
           class="text-gray-700 transition hover:text-gray-700/75"
