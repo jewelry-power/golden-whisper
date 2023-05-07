@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-
+import jwt_decode from "jwt-decode";
 function SignUp() {
    
 const [name,setName]=useState("")
@@ -7,21 +7,82 @@ const [password,setPassword]=useState("")
 const [email,setEmail]=useState("")
 const [info,setInfo]=useState([])
 const [storeData,setdata]=useState()
+const [googleUser,setGoogleUser]=useState()
+
+  function UserValidate (string) {
+  let pattern = /\s/g;
+  return !pattern.test(string)
+}
+ function PassWordValidate(string) {
+  let pattern = /(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/g;
+  return pattern.test(string)
+}
+function emailValidate  (string) {
+  let pattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/g;
+  return pattern.test(string);
+}
+
+if(!UserValidate(name)){
+  connsole.log("User Validation")
+}
+
+
+function handelCallBack(response){
+  // {theme:"outline",size:"large"}
+  // console.log("test",response.credential)
+  let userObject=jwt_decode(response.credential)
+  // console.log("test",userObject)
+  setGoogleUser(userObject)
+  document.getElementById("signInDiv").hidden=true
+
+}
+useEffect(()=>{
+  google.accounts.id.initialize({
+    client_id:"593425946716-q23ll3fdbj33ps4douabe5ud8217kh87.apps.googleusercontent.com",
+    callback:handelCallBack
+
+  })
+  google.accounts.id.renderButton(
+    document.getElementById("signInDiv"),
+    {theme:"outline",size:"large"}
+
+  )
+},[])
+
 
 const [saveToLocal,setLocal]=useState([])
 useEffect(() => {
     if (info.length > 0)  
-    {localStorage.setItem("infoUser", JSON.stringify(info))}
+    {
+      
+      if((localStorage.infoUser.includes(email))) {
+        localStorage.removeItem(info)
+        
+        info.pop()  
+   }
+        localStorage.setItem("infoUser", JSON.stringify(info))
+    }
     else{
 
         setInfo(JSON.parse(localStorage.getItem("infoUser"))) 
     }
 }, [info]);
+
 function handelSubmit(e){
     e.preventDefault()
     const user={name,email,password}
     const data=[...info,user]
     setInfo(data) 
+    if(localStorage.infoUser.includes(email)) {
+      
+     
+    // alert("user already exists")
+    
+    }
+}
+function handelSignOut(e){
+  setGoogleUser({})
+  document.getElementById("signInDiv").hidden=false 
 }
 
   
@@ -63,6 +124,17 @@ function handelSubmit(e){
   
           <button type="submit" className="w-full block bg-amber-400  hover:bg-amber-300 focus:bg-amber-200 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6" onClick={(e)=>{handelSubmit(e)}}>sign up </button>
+                 <div id="signInDiv"></div>
+                 {Object.keys(googleUser).length!==0 &&
+                 <button onClick={(e)=>handelSignOut(e)}>Sign out</button>
+
+                 }
+                 {googleUser&&
+                 <div>
+                  <img src={googleUser.picture}/>
+                 </div>
+               
+                 }
         </form>
         <p className="mt-8">do you have account? <a  className="text-blue-500 hover:text-blue-700 font-semibold">log in here</a></p>
   
@@ -72,6 +144,7 @@ function handelSubmit(e){
     <div className="bg-indigo-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
       <img src="/src/assets/login.png" alt="" className="w-full h-full object-cover" />
     </div>
+   
   </section></div>
   )
 }

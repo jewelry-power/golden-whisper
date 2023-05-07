@@ -8,18 +8,23 @@ const [check,setCheck]=useState()
 function handelSignIn(e){
 e.preventDefault();
 const data=JSON.parse(localStorage.getItem("infoUser"));
-data.map((user)=>{
-
-    let email=user.email
-    console.log(email)
-}
-
-)
+// let info=Object.values(data)
+data.forEach((element,index) => {
+    let email=element.email
+    let password=element.password
+   if(emailInput==email){
+      let user={email,password}
+    }
+    
+});
 if(!localStorage.infoUser.includes(emailInput)){
     alert(`seems like you dont have account ,sign up now`)
 }
+if(localStorage.infoUser.includes(emailInput)&&localStorage.infoUser.includes(passwordInput)){
+ alert("now you have an account")  
+}
 if(localStorage.infoUser.includes(emailInput)){
- console.log("now you have an account")  
+alert("wrong password")
 }
 }
   return (
